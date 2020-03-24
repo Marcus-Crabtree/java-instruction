@@ -1,0 +1,16 @@
+// public - any other class in this project cna see me
+//class - this is a class
+// HelloWorldAgain - the name of this class
+public class HelloWorldAgain {
+//public - public method that any class in this project can see
+// static - we dont need an instance of this class to run
+//void - return type... void means this method has no return type
+//main - the name of this method
+//string[] args - 'args' is a property passed into this method
+//					the data type of 'args' is a string array
+	public static void main(String[] args) {
+		System.out.println("Hello Jave Bootcamp Wrold... Again!!!");
+
+	}
+
+}
