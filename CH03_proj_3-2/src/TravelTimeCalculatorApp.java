@@ -15,22 +15,24 @@ public class TravelTimeCalculatorApp {
 	while(choice.equalsIgnoreCase("y")) {
 		System.out.println("Please enter your miles: ");
 		//int distance = sc.nextInt();
-		BigDecimal distance = new BigDecimal(sc.next());
+		String milesStr = sc.next();
+		BigDecimal milesBD = new BigDecimal(milesStr);
 		System.out.println("Please enter miles per hour: ");
 		BigDecimal speed = new BigDecimal(sc.next());
-		BigDecimal time = distance.divide(speed,2, RoundingMode.HALF_UP);
+		BigDecimal mphBD = sc.nextBigDecimal();
 		//int speed = sc.nextInt();
 		//int time = distance/speed;
 		//System.out.println("ETA:"+time); undo remark to check code works
 		//distance.divide(speed);
-		BigDecimal hours = time.divide(speed);
-		BigDecimal minutes = ;
-		
-		
+		//BigDecimal hours = time.divide(speed);
+		//BigDecimal minutes = ;
+		BigDecimal minutesTraveled = milesBD.divide(mphBD).multiply(new BigDecimal(60));
+		int timeTraveledHours = (int)minutesTraveled.divide(new BigDecimal(60)).doubleValue();
+		int remainingMinutes = (int)minutesTraveled.remainder(new BigDecimal(60).doubleValue());
 		System.out.println("Estimated travel time: ");
 		System.out.println("-----------------------");
-		System.out.println("Hours: "+hours );
-		System.out.println("Minutes: "+minutes );
+		System.out.println("Hours: "+timeTraveledHours );
+		System.out.println("Minutes: "+remainingMinutes );
 		
 		 System.out.print("Calculate another ETA? (y/n): ");
          choice = sc.next();
