@@ -26,9 +26,10 @@ public class TravelTimeCalculatorApp {
 		//distance.divide(speed);
 		//BigDecimal hours = time.divide(speed);
 		//BigDecimal minutes = ;
-		BigDecimal minutesTraveled = milesBD.divide(mphBD).multiply(new BigDecimal(60));
-		int timeTraveledHours = (int)minutesTraveled.divide(new BigDecimal(60)).doubleValue();
-		int remainingMinutes = (int)minutesTraveled.remainder(new BigDecimal(60).doubleValue());
+		BigDecimal sixty = new BigDecimal(60);
+		BigDecimal minutesTraveled = milesBD.divide(mphBD,2,RoundingMode.HALF_UP).multiply (sixty);
+		int timeTraveledHours = (int)minutesTraveled.divide(sixty,2,RoundingMode.HALF_UP).doubleValue();
+		int remainingMinutes = (int)minutesTraveled.remainder(sixty).doubleValue();
 		System.out.println("Estimated travel time: ");
 		System.out.println("-----------------------");
 		System.out.println("Hours: "+timeTraveledHours );
