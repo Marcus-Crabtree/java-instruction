@@ -15,6 +15,7 @@ public class ForLoopApp {
 			System.out.println("points: "+i);
 			System.out.println("Hoop scored!");
 		}
+		// count down
 		System.out.println("Its monday, count down to friday!");
 		for (int i=4; i>=1;i--) {
 			System.out.println(i +"days left, dangit");
@@ -23,6 +24,13 @@ public class ForLoopApp {
 		
 		System.out.println("goodbye");
 
+		//variables can go in for loop
+		int orders = 30;
+		System.out.println("Lets process some orders ... 30 orders");
+		for (int i=0; i< orders;i++) {
+			System.out.println("Order processed; ID is:"+i);
+					}
+		System.out.println("All orders processed!");
 	}
 
 }
