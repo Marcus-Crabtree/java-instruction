@@ -5,6 +5,7 @@ public class TableOfPowersApp {
 	public static void main(String[] args) {
 		// welcome
 		System.out.println("Welcome to table of Powers App");
+		System.out.println("==============================");
 		Scanner sc = new Scanner(System.in);
 		String choice = "y";
 
@@ -13,6 +14,7 @@ public class TableOfPowersApp {
 			System.out.print("Enter an interger");
 			int n = sc.nextInt();
 			// biz logic
+			System.out.println();
 			System.out.println("Number\tSquared\tCubed");
 			System.out.println("======\t=======\t======");
 			for (int i = 1; i <= n; i++) {
