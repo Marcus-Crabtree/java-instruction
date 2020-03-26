@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class TableOfPowersApp {
+public class tableOfPowersApp {
 
 	public static void main(String[] args) {
 		// welcome
