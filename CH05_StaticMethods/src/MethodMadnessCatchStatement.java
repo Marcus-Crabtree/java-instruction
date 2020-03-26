@@ -1,7 +1,7 @@
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class MethodMadness {
+public class MethodMadnessCatchStatement {
 
 	public static void main(String[] args) {
 		System.out.println("Hello");
