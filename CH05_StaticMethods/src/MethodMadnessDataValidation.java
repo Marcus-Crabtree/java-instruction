@@ -39,7 +39,7 @@ public class MethodMadnessDataValidation {
 		i = sc.nextInt();
 		break;
 		}
-		// reprompt if bad data
+		// re-prompt if bad data
 		else {
 			System.out.println("Error, Entry must be ah whole number");
 			sc.nextInt();
