@@ -15,7 +15,7 @@ public class ProductManagerApp {
 		Product p2 = new Product("MySQL", "Murrach's MySQL", 54.50);
 		System.out.println(p2);
 		
-		System.out.println(p1);
+		System.out.println(p1); // displaying numberOfObjects increase
 		
 		System.out.println("goodbye.");
 	}
