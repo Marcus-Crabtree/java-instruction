@@ -13,11 +13,11 @@ public class Die {
 	}
 
 	public void roll() {
+		value = (int) (Math.random() * 6) + 1;
 
 	}
 
 	public int getValue() {
-		value = (int) (Math.random() * 6) + 1;
 		return value;
 	}
 
