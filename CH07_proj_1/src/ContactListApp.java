@@ -2,25 +2,25 @@
 public class ContactListApp {
 
 	public static void main(String[] args) {
+		//welcome
+		
 		System.out.println("Welcome to Contact List application.");
 		
+		//get user input firstname, last name, email, phone
+		String fn = Console.getString("Enter first name:  ");
+		String ln = Console.getString("Enter last name:  ");
+		String em = Console.getString("Enter Email:  ");
+		String ph = Console.getString("Enter phone number:  ");
+		
+		//do bix logic
+		Contact c = new Contact(fn,ln,em,ph);
+		System.out.println(c.displayContact());
+		
+		
+		//display results Current contact display
+		
 		//need to set a loop
-		Contact c1 = new Contact();
-		c1.setFirstName("Marcus");
-		c1.setLastName("Crabtree");
-		c1.setEmail("kmarcuscrabtree@gmail.com");
-		c1.setPhone("562-296-7129");
-		//System.out.println(c1.displayContact);
-		
-		
-		Contact c2 = new Contact("Tom","Smith","tsmith@yahoo.com","513-234-5433");
-		Contact c3 = new Contact("bill","Williams","bwill@gmail.com","513-456-2231");
-		Contact c4 = new Contact("sherry","Temple","Stemp@hotmail.com","209-456-4333");
-		
-		System.out.println(c1);
-		System.out.println(c2);
-		System.out.println(c3);
-		System.out.println(c4);
+		System.out.println("Goodbye");
 	}
 
 }
