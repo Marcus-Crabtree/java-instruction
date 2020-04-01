@@ -12,8 +12,10 @@ public class Employee extends Person {
 		this.socSecNum = socSecNum;
 	}
 	// getters and setters
+	//requirement mask ssn xxx-xx-1234
 	public String getSocSecNum() {
-		return socSecNum;
+		String last4 = socSecNum.substring(7);
+		return "XXX-XX-"+last4;
 	}
 
 	public void setSocSecNum(String socSecNum) {
@@ -22,7 +24,7 @@ public class Employee extends Person {
 	// toString
 	@Override
 	public String toString() {
-		return "Employee [socSecNum=" + socSecNum + "]";
+		return super.toString()+"\nSSN: "+ getSocSecNum();
 	}
 	
 
