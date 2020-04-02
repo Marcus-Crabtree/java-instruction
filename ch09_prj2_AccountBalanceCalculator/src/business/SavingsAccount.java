@@ -1,16 +1,16 @@
+package business;
 
 public class SavingsAccount extends Account {
 	private double monthlyInterestRate;
 	private double monthlyInterestPayment;
 	
-	public SavingsAccount() {
-		super();
-	}
-
-	public SavingsAccount(double balance, double monthlyInterestRate ) {
+	public SavingsAccount(double balance, double monthlyInterestRate) {
 		super(balance);
 		this.monthlyInterestRate = monthlyInterestRate;
-		
+	}
+
+	public SavingsAccount() {
+		super();
 	}
 
 	public double getMonthlyInterestRate() {
@@ -28,16 +28,24 @@ public class SavingsAccount extends Account {
 	public void setMonthlyInterestPayment(double monthlyInterestPayment) {
 		this.monthlyInterestPayment = monthlyInterestPayment;
 	}
-
-	// apply monthlypayment
-	public void applyPayment( ) {
-		//calcualte  monthly interest payment
+	
+	// apply monthlyPayment to the balance
+	public void applyPayment() {
+		// calculate monthlyInterestPayment
 		monthlyInterestPayment = balance * monthlyInterestRate;
-		//apply payment
-		balance+= monthlyInterestPayment;
+		
+		// apply to balance
+		balance += monthlyInterestPayment;
 	}
 	
 	
 	
-
+	
+	
+	
+	
+	
+	
+	
+	
 }

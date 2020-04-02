@@ -1,41 +1,37 @@
+package business;
 
-public class Account implements Depositable, Withdrawlable, Balanceable {
+public class Account implements Depositable, Withdrawable, Balanceable {
 	
 	protected double balance;
-	
-	public Account() {
-		super();
-	}
-	
-	
+
 	public Account(double balance) {
 		super();
 		this.balance = balance;
 	}
 
+	public Account() {
+		super();
+	}
 
 	@Override
-	public double getbalance() {
-		// TODO Auto-generated method stub
+	public double getBalance() {
 		return balance;
 	}
 
 	@Override
 	public void setBalance(double balance) {
-		// TODO Auto-generated method stub
 		this.balance = balance;
 	}
 
 	@Override
-	public void withdrawl(double amount) {
+	public void withdraw(double amount) {
 		balance -= amount;
-
 	}
 
 	@Override
 	public void deposit(double amount) {
 		balance += amount;
-
 	}
+	
 
 }
