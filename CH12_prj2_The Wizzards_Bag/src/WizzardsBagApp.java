@@ -34,6 +34,9 @@ public class WizzardsBagApp {
 					inventory.add(grabItem);
 					System.out.println(grabItem + " was added!");
 				}
+				else {
+					System.out.println("Your bag is full! Drop an item to pick another item up.");
+				}
 			} 
 			else if (choice.equalsIgnoreCase("edit")) {
 				editItemIdx = Console.getInt("Number: ", 0, inventory.size() + 1);
