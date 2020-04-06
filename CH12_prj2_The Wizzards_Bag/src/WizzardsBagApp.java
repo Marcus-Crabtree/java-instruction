@@ -18,7 +18,7 @@ public class WizzardsBagApp {
 		inventory.add("Cloth boots of stamina");
 
 		commandMenu();
-		choice = Console.getString("\nCommand: ");
+		choice = Console.getString("\nCommand: ", true);
 
 		// -- begin loop"
 		while (!choice.equalsIgnoreCase("exit")) {
@@ -64,7 +64,7 @@ public class WizzardsBagApp {
 
 	public static void commandMenu() {
 		System.out.println("\n List of Commands: \n" + "\nshow - Shows items in bag" + "\nGrab - grab an item"
-				+ "\nEdit - change the name of an item" + "\nexit - exit the program");
+				+ "\nEdit - change the name of an item" + "\nHelp - show command list" + "\nexit - exit the program" );
 
 	}
 
