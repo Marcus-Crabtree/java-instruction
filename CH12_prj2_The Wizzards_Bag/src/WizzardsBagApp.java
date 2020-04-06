@@ -48,7 +48,8 @@ public class WizzardsBagApp {
 			else if (choice.equalsIgnoreCase("Drop")) {
 				dropItemIdx = Console.getInt("Number: ", 0, inventory.size() + 1);
 				System.out.println(
-						inventory.get((dropItemIdx) - 1) + " was dropped!" + inventory.remove(dropItemIdx - 1));
+						inventory.get((dropItemIdx) - 1) + " was dropped! ");
+						inventory.remove(dropItemIdx - 1);
 
 			} 
 			else if (choice.equalsIgnoreCase("help")) {
