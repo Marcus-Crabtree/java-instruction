@@ -5,10 +5,11 @@ import java.util.List;
 import business.Movie;
 import db.DAO;
 import db.MovieList;
+import db.MovieTextFile;
 import util.Console;
 
 public class BmdbConsoleApp {
-	private static DAO<Movie> movieRepo = new MovieList();
+	private static DAO<Movie> movieRepo = new MovieTextFile();
 
 	public static void main(String[] args) {
 		// welcome & initialization
@@ -21,7 +22,7 @@ public class BmdbConsoleApp {
 			// get user input
 			command = Console.getString("Command: ", true);
 
-			// do bisiness logic
+			// do business logic
 
 			// display results
 			switch (command) {
