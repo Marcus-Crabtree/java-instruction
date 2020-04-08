@@ -75,6 +75,9 @@ public class PetStoreApp {
 
 	public static void addPet() {
 		// prompt user for pet data
+		System.out.println("Add a Pet");
+		System.out.println("------------------");
+		System.out.println();
 		int id = Console.getInt("Pet ID: ", 0, (int) Double.POSITIVE_INFINITY);
 		String type = Console.getString("Type? ", true);
 		String species = Console.getString("Species? ", true);
