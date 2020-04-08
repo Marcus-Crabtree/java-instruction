@@ -1,0 +1,2 @@
+jaja	Javiers Joke Book	12.5
+java	Murach's Java Programming	57.5
