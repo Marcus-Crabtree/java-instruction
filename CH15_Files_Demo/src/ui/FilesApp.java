@@ -50,7 +50,7 @@ public class FilesApp {
 		// write in a file
 		PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(productsFile)));
 		out.println("java\tMurach's Java Programming\t57.50");
-		// cloose output stream
+		// close output stream
 		out.close();
 
 		// read data form a file
