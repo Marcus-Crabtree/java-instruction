@@ -1,17 +1,17 @@
 package business;
 
-public class Pets {
+public class Pet {
 	private int id;
 	private String type;
 	private String species;
 	private String name;
 	private double age;
 
-	public Pets() {
-		super();
+	public Pet() {
+		
 	}
 
-	public Pets(int id, String type, String species, String name, double age) {
+	public Pet(int id, String type, String species, String name, double age) {
 		super();
 		this.id = id;
 		this.type = type;

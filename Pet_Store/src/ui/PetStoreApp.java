@@ -1,25 +1,25 @@
 package ui;
 
-import java.util.ArrayList;      //currently will not add to established list, 
-import java.util.List;           //display
-								//delete untested
-import business.Pets;
+import java.util.ArrayList;       
+import java.util.List;           
+								
+import business.Pet;
 import util.Console;
 
 public class PetStoreApp {
-	private static List<Pets> pets = null;
+	private static List<Pet> pets = new ArrayList<Pet>();
 
 	public void List() {
 		// initialize the list of movies
-		pets = new ArrayList<Pets>();
-		Pets p1 = new Pets(1, "Dog", "Golden Retreiver", "Ruby", 5);
-		Pets p2 = new Pets(2, "Dog", "Golden Retreiver ", "Cooper", 1);
-
-		pets.add(p1);
-		pets.add(p2);
+		pets = new ArrayList<Pet>();
 	}
 
 	public static void main(String[] args) {
+		Pet p1 = new Pet(1, "Dog", "Golden Retreiver", "Ruby", 5);
+		Pet p2 = new Pet(2, "Dog", "Golden Retreiver ", "Cooper", 1);
+		
+		pets.add(p1);
+		pets.add(p2);
 		// welcome+initialization
 
 		System.out.println("Welcome to the Pet Store App!");
@@ -81,7 +81,7 @@ public class PetStoreApp {
 		String name = Console.getString("Name? ", true);
 		double age = Console.getDouble("age? ", 0, (double) Double.POSITIVE_INFINITY);
 		// add movie
-		Pets p = new Pets(id, type, species, name, age);
+		Pet p = new Pet(id, type, species, name, age);
 		pets.add(p);
 
 		// display confirmation message
@@ -94,25 +94,31 @@ public class PetStoreApp {
 		System.out.println("---------------");
 		System.out.println();
 		// get list of all pets
-		 List<Pets> pets = pets.getAll();
+		 
 
 		// display to screen
-		for (Pets p : pets) {
+		for (Pet p : pets) {
 			System.out.println(p);
 		}
 	}
 
 	public static void removePet() {
 		System.out.println("Pet Adoption");
-		System.out.println("---------------");
+		System.out.println("---------------___");
 		int id = Console.getInt("Enter th ID you wish to adopt:  ");
 
-		Pets p = pets.get(id);
+		Pet petToRemove = null;
+		for (Pet p: pets) {
+			if (p.getId()== id) {
+				petToRemove =p;
+				break;
+			}
+		}
 
 		System.out.println();
-		if (p != null) {
-			pets.remove(p);
-			System.out.println(p.getName() + " has been Adopted!.\n");
+		if (petToRemove != null) {
+			pets.remove(petToRemove);
+			System.out.println(petToRemove.getName() + " has been Adopted!.\n");
 		} else {
 			System.out.println("No pet matches that ID.\n");
 		}
