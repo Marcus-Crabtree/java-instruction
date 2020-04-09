@@ -19,24 +19,20 @@ public class UserDB implements DAO<User> {
 
 	@Override
 	public User get(int id) {
-		String sql = "SELECT * " +
-					 "FROM Users"+
-					 "WHERE UserID = ?";
+		String sql = "SELECT * " + " FROM Users" + " WHERE UserID = ?";
 		User u = null;
 		try (Connection conn = getConnection();
-		PreparedStatement ps = conn.prepareStatement(sql);
-		ResultSet rs = ps.executeQuery()) {
+				PreparedStatement ps = conn.prepareStatement(sql);
+				ResultSet rs = ps.executeQuery()) {
 			if (rs.next()) {
-				int id1 =  rs.getInt(id);
+				int id1 = rs.getInt(id);
 			}
-			
-			
+
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-	
 
-	return null;
+		return null;
 
 	}
 
@@ -75,7 +71,7 @@ public class UserDB implements DAO<User> {
 	public boolean add(User u) {
 		boolean success = false;
 		String sql = "INSERT into User (UserName, PassWord, FirstName,"
-				+ "LastName, PhoneNumber, Email, Isreviewer, IsAdmin)" + "values (?,?,?,?,?,?,?,?) ";
+				+ " LastName, PhoneNumber, Email, Isreviewer, IsAdmin)" + " values (?,?,?,?,?,?,?,?) ";
 		try (Connection conn = getConnection(); PreparedStatement ps = conn.prepareStatement(sql)) {
 			ps.setString(1, u.getUserName());
 			ps.setString(2, u.getPassword());

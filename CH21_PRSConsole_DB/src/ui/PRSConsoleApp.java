@@ -105,6 +105,7 @@ public class PRSConsoleApp {
 		System.out.println("list - List all Users");
 		System.out.println("add - Add a User");
 		System.out.println("del - Delete a user");
+		System.out.println("get - Get a User");
 		System.out.println("exit - Exit app");
 		System.out.println();
 	}
