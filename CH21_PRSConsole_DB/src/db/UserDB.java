@@ -19,8 +19,34 @@ public class UserDB implements DAO<User> {
 
 	@Override
 	public User get(int id) {
-		// TODO Auto-generated method stub
-		return null;
+		String sql = "SELECT UserName, PassWord, FirstName, LastName, PhoneNumber, Email, Isreviewer, IsAdmin" +
+					 "FROM Users"+
+					 "WHERE UserID = ?";
+		User u = null;
+		try (Connection conn = getConnection();
+		PreparedStatement ps = conn.prepareStatement(sql);
+		ResultSet rs = ps.executeQuery()) {
+			if (UserID()==) {
+				int id = rs.getInt(1);
+				String un = rs.getString(2);
+				String pw = rs.getString(3);
+				String fn = rs.getString(4);
+				String ln = rs.getString(5);
+				String pn = rs.getString(6);
+				String em = rs.getString(7);
+				boolean r = rs.getBoolean(8);
+				boolean a = rs.getBoolean(9);
+				
+			}
+			
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	
+
+	return null;
+
 	}
 
 	@Override
@@ -58,38 +84,44 @@ public class UserDB implements DAO<User> {
 	public boolean add(User u) {
 		boolean success = false;
 		String sql = "INSERT into User (UserName, PassWord, FirstName,"
-				+ "LastName, PhoneNumber, Email, Isreviewer, IsAdmin)" + 
-				"values (?,?,?,?,?,?,?,?) ";
-		try (Connection conn = getConnection();
-				PreparedStatement ps = conn.prepareStatement(sql)) {
-				ps.setString(1, u.getUserName());
-				ps.setString(2, u.getPassword());
-				ps.setString(3, u.getFirstName());
-				ps.setString(4, u.getLastName());
-				ps.setString(5, u.getPhoneNumber());
-				ps.setString(6, u.getEmail());
-				ps.setBoolean(7, u.isReviewer());
-				ps.setBoolean(8, u.isAdmin());
-				ps.executeUpdate();
-				success = true;
-			
+				+ "LastName, PhoneNumber, Email, Isreviewer, IsAdmin)" + "values (?,?,?,?,?,?,?,?) ";
+		try (Connection conn = getConnection(); PreparedStatement ps = conn.prepareStatement(sql)) {
+			ps.setString(1, u.getUserName());
+			ps.setString(2, u.getPassword());
+			ps.setString(3, u.getFirstName());
+			ps.setString(4, u.getLastName());
+			ps.setString(5, u.getPhoneNumber());
+			ps.setString(6, u.getEmail());
+			ps.setBoolean(7, u.isReviewer());
+			ps.setBoolean(8, u.isAdmin());
+			ps.executeUpdate();
+			success = true;
+
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		
+
 		return success;
 	}
 
 	@Override
 	public boolean update(User u) {
-		// TODO Auto-generated method stub
+		// leaving this alone for now
 		return false;
 	}
 
 	@Override
 	public boolean delete(User u) {
-		// TODO Auto-generated method stub
-		return false;
+		boolean success = false;
+		String sql = "DELETE from User WHERE id =?";
+		try (Connection conn = getConnection(); PreparedStatement ps = conn.prepareStatement(sql)) {
+			ps.setInt(1, u.getId());
+			success = true;
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return success;
 	}
 
 }
