@@ -28,10 +28,10 @@ public class PRSConsoleApp {
 				addUser();
 				break;
 			case "del":
-				deleteUser(); // need to complete
+				deleteUser(); 
 				break;
 			case "get":
-				getUser(); // need to complete
+				getUser(); 
 				break;
 			case "exit":
 				break;
@@ -86,7 +86,7 @@ public class PRSConsoleApp {
 
 	}
 
-	private static void deleteUser() { // need to finish
+	private static void deleteUser() { 
 		int id = Console.getInt("UserID? ");
 		User user = userRepo.get(id);
 		
