@@ -19,7 +19,7 @@ public class UserDB implements DAO<User> {
 
 	@Override
 	public User get(int id) {
-		String getUserQuery = "SELECT * FROM Users WHERE UserID = ?";
+		String getUserQuery = "SELECT * FROM User WHERE Id = ?";
 		User user = null;
 		try (Connection conn = getConnection(); PreparedStatement ps = conn.prepareStatement(getUserQuery)) {
 			ps.setInt(1, id);
@@ -114,6 +114,7 @@ public class UserDB implements DAO<User> {
 		String sql = "DELETE from User WHERE id =?";
 		try (Connection conn = getConnection(); PreparedStatement ps = conn.prepareStatement(sql)) {
 			ps.setInt(1, u.getId());
+			ps.execute();
 			success = true;
 
 		} catch (SQLException e) {

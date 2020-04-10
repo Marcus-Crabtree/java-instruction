@@ -27,7 +27,7 @@ public class PRSConsoleApp {
 			case "add":
 				addUser();
 				break;
-			case "del ":
+			case "del":
 				deleteUser(); // need to complete
 				break;
 			case "get":
