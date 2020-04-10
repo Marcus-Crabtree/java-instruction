@@ -1,8 +1,8 @@
 package ui;
 
-import java.util.ArrayList;       
-import java.util.List;           
-								
+import java.util.ArrayList;
+import java.util.List;
+
 import business.Pet;
 import util.Console;
 
@@ -17,7 +17,7 @@ public class PetStoreApp {
 	public static void main(String[] args) {
 		Pet p1 = new Pet(1, "Dog", "Golden Retreiver", "Ruby", 5);
 		Pet p2 = new Pet(2, "Dog", "Golden Retreiver ", "Cooper", 1);
-		
+
 		pets.add(p1);
 		pets.add(p2);
 		// welcome+initialization
@@ -97,7 +97,6 @@ public class PetStoreApp {
 		System.out.println("---------------");
 		System.out.println();
 		// get list of all pets
-		 
 
 		// display to screen
 		for (Pet p : pets) {
@@ -111,9 +110,9 @@ public class PetStoreApp {
 		int id = Console.getInt("Enter th ID you wish to adopt:  ");
 
 		Pet petToRemove = null;
-		for (Pet p: pets) {
-			if (p.getId()== id) {
-				petToRemove =p;
+		for (Pet p : pets) {
+			if (p.getId() == id) {
+				petToRemove = p;
 				break;
 			}
 		}
