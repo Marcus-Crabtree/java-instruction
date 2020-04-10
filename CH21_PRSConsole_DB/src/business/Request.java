@@ -5,7 +5,7 @@ import java.time.LocalDateTime;
 
 public class Request {
 	private int id;
-	private int UserID;
+	private int userId;
 	private String description;
 	private String justification;
 	private String deliveryMode;
@@ -19,11 +19,11 @@ public class Request {
 		super();
 	}
 
-	public Request(int id, int UserID, String description, String justification, String deliveryMode, String status,
+	public Request(int id, int userId, String description, String justification, String deliveryMode, String status,
 			String reasonForRejection, LocalDate dateNedded, double total, LocalDateTime submittedDate) {
 		super();
 		this.id = id;
-		this.UserID = UserID;
+		this.userId = userId;
 		this.description = description;
 		this.justification = justification;
 		this.deliveryMode = deliveryMode;
@@ -42,12 +42,12 @@ public class Request {
 		this.id = id;
 	}
 
-	public int getUserID() {
-		return UserID;
+	public int getUserId() {
+		return userId;
 	}
 
-	public void setUserID(int UserID) {
-		this.UserID = UserID;
+	public void setUserId(int userId) {
+		this.userId = userId;
 	}
 
 	public String getDescription() {
@@ -116,13 +116,12 @@ public class Request {
 
 	@Override
 	public String toString() {
-		return "Request [id=" + id + ", UserID=" + UserID + ", description=" + description + ", justification="
+		return "Request [id=" + id + ", userId=" + userId + ", description=" + description + ", justification="
 				+ justification + ", deliveryMode=" + deliveryMode + ", status=" + status + ", reasonForRejection="
 				+ reasonForRejection + ", dateNedded=" + dateNedded + ", total=" + total + ", submittedDate="
 				+ submittedDate + "]";
 	}
-	
-	
+
 	
 	
 

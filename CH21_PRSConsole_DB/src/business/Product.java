@@ -2,7 +2,7 @@ package business;
 
 public class Product {
 	private int id;
-	private int VendorID;
+	private int vendorId;
 	private String partNumber;
 	private String name;
 	private double price;
@@ -13,10 +13,10 @@ public class Product {
 		super();
 	}
 
-	public Product(int id, int vendorID, String partNumber, String name, double price, String unit, String photoPath) {
+	public Product(int id, int vendorId, String partNumber, String name, double price, String unit, String photoPath) {
 		super();
 		this.id = id;
-		VendorID = vendorID;
+		this.vendorId = vendorId;
 		this.partNumber = partNumber;
 		this.name = name;
 		this.price = price;
@@ -32,12 +32,12 @@ public class Product {
 		this.id = id;
 	}
 
-	public int getVendorID() {
-		return VendorID;
+	public int getVendorId() {
+		return vendorId;
 	}
 
-	public void setVendorID(int vendorID) {
-		VendorID = vendorID;
+	public void setVendorId(int vendorId) {
+		this.vendorId = vendorId;
 	}
 
 	public String getPartNumber() {
@@ -82,13 +82,8 @@ public class Product {
 
 	@Override
 	public String toString() {
-		return "Product [id=" + id + ", VendorID=" + VendorID + ", partNumber=" + partNumber + ", name=" + name
+		return "Product [id=" + id + ", vendorId=" + vendorId + ", partNumber=" + partNumber + ", name=" + name
 				+ ", price=" + price + ", unit=" + unit + ", photoPath=" + photoPath + "]";
 	}
-	
-	
-	
-	
-	
 
-}
+	}
