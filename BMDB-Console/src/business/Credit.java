@@ -2,18 +2,18 @@ package business;
 
 public class Credit {
 	private int id;
-	private int ActorID;
-	private int MovieID;
+	private int actorId;
+	private int movieId;
 	
 	public Credit() {
 		super();
 	}
 
-	public Credit(int id, int actorID, int movieID) {
+	public Credit(int id, int actorId, int movieId) {
 		super();
 		this.id = id;
-		ActorID = actorID;
-		MovieID = movieID;
+		this.actorId = actorId;
+		this.movieId = movieId;
 	}
 
 	public int getId() {
@@ -24,27 +24,26 @@ public class Credit {
 		this.id = id;
 	}
 
-	public int getActorID() {
-		return ActorID;
+	public int getActorId() {
+		return actorId;
 	}
 
-	public void setActorID(int actorID) {
-		ActorID = actorID;
+	public void setActorId(int actorId) {
+		this.actorId = actorId;
 	}
 
-	public int getMovieID() {
-		return MovieID;
+	public int getMovieId() {
+		return movieId;
 	}
 
-	public void setMovieID(int movieID) {
-		MovieID = movieID;
+	public void setMovieId(int movieId) {
+		this.movieId = movieId;
 	}
 
 	@Override
 	public String toString() {
-		return "Credit [id=" + id + ", ActorID=" + ActorID + ", MovieID=" + MovieID + "]";
+		return "Credit [id=" + id + ", actorId=" + actorId + ", movieId=" + movieId + "]";
 	}
-	
-	
 
 }
+	
