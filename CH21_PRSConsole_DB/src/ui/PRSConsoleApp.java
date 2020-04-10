@@ -24,10 +24,10 @@ public class PRSConsoleApp {
 			case "list":
 				listUsers();
 				break;
-			case " add":
+			case "add":
 				addUser();
 				break;
-			case " del ":
+			case "del ":
 				deleteUser(); // need to complete
 				break;
 			case "get":
@@ -64,18 +64,17 @@ public class PRSConsoleApp {
 	}
 
 	private static void getUser() {
-		List<User> users = userRepo.get(id);
-		
-		for (User u : users) {
-			System.out.println(u);
-		}
-		
-		}
-		else {
+		int id = Console.getInt("UserID? ");
+		User user = userRepo.get(id);
+
+		if (user != null) {
+			System.out.println(user);
+
+		} else {
 			System.out.println("User not found");
+
 		}
-		
-	
+	}
 
 	private static void listUsers() {
 		List<User> users = userRepo.list();
@@ -88,11 +87,11 @@ public class PRSConsoleApp {
 	}
 
 	private static void deleteUser() { // need to finish
-
-		User u = userRepo.get(id);
-
-		if (userRepo.delete(u)) {
-			System.out.println("User successfully added.");
+		int id = Console.getInt("UserID? ");
+		User user = userRepo.get(id);
+		
+		if (userRepo.delete(user)) {
+			System.out.println("User successfully removed.");
 		} else {
 			System.out.println("Issue adding User.");
 		}

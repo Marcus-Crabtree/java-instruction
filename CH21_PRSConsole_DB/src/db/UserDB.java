@@ -20,12 +20,11 @@ public class UserDB implements DAO<User> {
 	@Override
 	public User get(int id) {
 		String getUserQuery = "SELECT * FROM Users WHERE UserID = ?";
-		User u = null;
+		User user = null;
 		try (Connection conn = getConnection(); PreparedStatement ps = conn.prepareStatement(getUserQuery)) {
 			ps.setInt(1, id);
 			ResultSet rs = ps.executeQuery();
 			if (rs.next()) {
-				int id1 = rs.getInt(id);
 				String un = rs.getString(2);
 				String pw = rs.getString(3);
 				String fn = rs.getString(4);
@@ -34,12 +33,14 @@ public class UserDB implements DAO<User> {
 				String em = rs.getString(7);
 				boolean r = rs.getBoolean(8);
 				boolean a = rs.getBoolean(9);
-				User u1 = new User(id, un, pw, fn, ln, pn, em, r, a);
+				user = new User(id, un, pw, fn, ln, pn, em, r, a);
 				
 				
 			}
-
-		} catch (SQLException e) {
+			rs.close();
+		}
+		
+		catch (SQLException e) {
 			e.printStackTrace();
 		}
 
