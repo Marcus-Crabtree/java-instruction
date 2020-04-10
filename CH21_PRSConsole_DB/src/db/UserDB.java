@@ -17,6 +17,23 @@ public class UserDB implements DAO<User> {
 
 	}
 
+	public User login(String un, String pw) {
+		String getUserQuery = "SELECT * FROM User WHERE username =? and password = ?";
+		User user = null;
+		try (Connection conn = getConnection(); PreparedStatement ps = conn.prepareStatement(getUserQuery)) {
+			ps.setString(1, un);
+			ps.setString(2, pw);
+			ResultSet rs = ps.executeQuery();
+			if (rs.next()) {
+				user = getUserFromResultSet(rs);
+			}
+			rs.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return user;
+	}
+
 	@Override
 	public User get(int id) {
 		String getUserQuery = "SELECT * FROM User WHERE Id = ?";
@@ -25,24 +42,12 @@ public class UserDB implements DAO<User> {
 			ps.setInt(1, id);
 			ResultSet rs = ps.executeQuery();
 			if (rs.next()) {
-				String un = rs.getString(2);
-				String pw = rs.getString(3);
-				String fn = rs.getString(4);
-				String ln = rs.getString(5);
-				String pn = rs.getString(6);
-				String em = rs.getString(7);
-				boolean r = rs.getBoolean(8);
-				boolean a = rs.getBoolean(9);
-				user = new User(id, un, pw, fn, ln, pn, em, r, a);
-
+				user = getUserFromResultSet(rs);
 			}
 			rs.close();
-		}
-
-		catch (SQLException e) {
+		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-
 		return user;
 	}
 
@@ -55,17 +60,7 @@ public class UserDB implements DAO<User> {
 				ResultSet rs = ps.executeQuery()) {
 			// while there is a row in the result set rs
 			while (rs.next()) {
-				// int id = rs.getstring("id");
-				int id = rs.getInt(1);
-				String un = rs.getString(2);
-				String pw = rs.getString(3);
-				String fn = rs.getString(4);
-				String ln = rs.getString(5);
-				String pn = rs.getString(6);
-				String em = rs.getString(7);
-				boolean r = rs.getBoolean(8);
-				boolean a = rs.getBoolean(9);
-				User u = new User(id, un, pw, fn, ln, pn, em, r, a);
+				User u = getUserFromResultSet(rs);
 				users.add(u);
 			}
 
@@ -75,6 +70,21 @@ public class UserDB implements DAO<User> {
 		}
 
 		return users;
+	}
+
+	private User getUserFromResultSet(ResultSet rs) throws SQLException {
+		// int id = rs.getstring("id");
+		int id = rs.getInt(1);
+		String un = rs.getString(2);
+		String pw = rs.getString(3);
+		String fn = rs.getString(4);
+		String ln = rs.getString(5);
+		String pn = rs.getString(6);
+		String em = rs.getString(7);
+		boolean r = rs.getBoolean(8);
+		boolean a = rs.getBoolean(9);
+		User u = new User(id, un, pw, fn, ln, pn, em, r, a);
+		return u;
 	}
 
 	@Override
