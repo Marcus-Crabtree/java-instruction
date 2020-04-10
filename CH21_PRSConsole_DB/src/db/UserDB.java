@@ -27,6 +27,9 @@ public class UserDB implements DAO<User> {
 			if (rs.next()) {
 				user = getUserFromResultSet(rs);
 			}
+			else {
+				//no user found for un,pw
+			}
 			rs.close();
 		} catch (SQLException e) {
 			e.printStackTrace();

@@ -81,10 +81,13 @@ public class PRSConsoleApp {
 	}
 	//TODO Resolve issue with DAO.login()
 	private static void login() {
-		System.out.println("Method not yet implemented.");
-		//String userName = Console.getString("User Name?: ", true);
-		//String password = Console.getString("Password?: ", true);
-		//User user = userRepo.login
+		if (userRepo instanceof UserDB) {
+			UserDB ur = (UserDB)userRepo;
+			String userName = Console.getString("User Name?: ", true);
+			String password = Console.getString("Password?: ", true);
+			User user = ur.login(userName,password);
+		}
+	
 	}
 	
 	private static void getUser() {
