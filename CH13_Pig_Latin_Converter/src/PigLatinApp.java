@@ -16,10 +16,10 @@ public class PigLatinApp {
 	private static String convertToLatin(String english) {
 		String end ="";
 		String spaces ="\\s+";
-		String[]words = english.split(spaces);
+		String[] words = english.split(spaces);
 		for (int i=0; i <words.length;i++) {
 			if (isVowel(words[i].toLowerCase().charAt(0))) {
-				end+= words[i] + "ay";
+				end+= words[i] + "ay ";
 			}else {
 				end += words[i].substring(1)+ words[i].substring(0,1)+ "ay ";
 			}

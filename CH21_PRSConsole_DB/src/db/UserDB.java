@@ -34,12 +34,11 @@ public class UserDB implements DAO<User> {
 				boolean r = rs.getBoolean(8);
 				boolean a = rs.getBoolean(9);
 				user = new User(id, un, pw, fn, ln, pn, em, r, a);
-				
-				
+
 			}
 			rs.close();
 		}
-		
+
 		catch (SQLException e) {
 			e.printStackTrace();
 		}

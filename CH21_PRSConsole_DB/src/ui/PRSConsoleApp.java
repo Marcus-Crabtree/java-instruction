@@ -93,7 +93,7 @@ public class PRSConsoleApp {
 		if (userRepo.delete(user)) {
 			System.out.println("User successfully removed.");
 		} else {
-			System.out.println("Issue adding User.");
+			System.out.println("Issue removing User.");
 		}
 
 	}
