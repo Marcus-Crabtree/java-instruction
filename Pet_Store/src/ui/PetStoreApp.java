@@ -106,7 +106,7 @@ public class PetStoreApp {
 
 	public static void removePet() {
 		System.out.println("Pet Adoption");
-		System.out.println("---------------___");
+		System.out.println("-------------------");
 		int id = Console.getInt("Enter th ID you wish to adopt:  ");
 
 		Pet petToRemove = null;
