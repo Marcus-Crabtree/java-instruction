@@ -3,6 +3,7 @@ package ui;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Consumer;
+import java.util.function.Function;
 import java.util.function.Predicate;
 
 import business.Contact;
@@ -41,9 +42,20 @@ public class ContactManagerApp {
 		System.out.println("Process contact list - print out names: ");
 		processContacts(contacts, c -> System.out.println(c.getName()));
 		
-		System.out.println("Process contact list - convert to uppercase: ");
-		processContacts(contacts, c -> c.setName(c.getName().toUpperCase()));
-		displayContacts(contacts);
+//		System.out.println("Process contact list - convert to uppercase: ");     // commented out to remove upcase
+//		processContacts(contacts, c -> c.setName(c.getName().toUpperCase()));
+//		displayContacts(contacts);
+		
+		System.out.println("transform contact list to list of strings(name:phone): ");
+		List<String>contactPhoneNumbers = transformContacts(contacts, c -> { String phone = (c.getPhone()==null) ? "n/a": c.getPhone();
+		return c.getName() + ": " + phone;
+		
+		});
+		for (String s: contactPhoneNumbers ) {
+			System.out.println(s);
+		}
+		
+		
 		
 		
 	}
@@ -75,6 +87,14 @@ private static void processContacts(List<Contact> contacts, Consumer<Contact> co
 	
 }
 
+private static List<String> transformContacts(List<Contact> contacts, Function<Contact, String> function) {
+	List<String> strings = new ArrayList<>();
+	for (Contact c: contacts) {
+		strings.add(function.apply(c));
+	}
+	return strings;
+	
+}
 
 
 
