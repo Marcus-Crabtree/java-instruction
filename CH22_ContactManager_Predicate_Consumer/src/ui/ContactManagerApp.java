@@ -2,6 +2,7 @@ package ui;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Consumer;
 import java.util.function.Predicate;
 
 import business.Contact;
@@ -37,6 +38,13 @@ public class ContactManagerApp {
 		List<Contact> contactsMurach = filterContacts(contacts,c -> c.getName().contains("Murach"));
 		displayContacts(contactsMurach);
 	
+		System.out.println("Process contact list - print out names: ");
+		processContacts(contacts, c -> System.out.println(c.getName()));
+		
+		System.out.println("Process contact list - convert to uppercase: ");
+		processContacts(contacts, c -> c.setName(c.getName().toUpperCase()));
+		displayContacts(contacts);
+		
 		
 	}
 
@@ -58,4 +66,18 @@ filteredContacts = new ArrayList<>();
 		}
 		
 	}
+
+private static void processContacts(List<Contact> contacts, Consumer<Contact> consumer) {
+	
+	for(Contact c: contacts) {
+		consumer.accept(c);
+	}
+	
+}
+
+
+
+
+
+
 }
