@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="BarAgeChecker/src"/>
+	<classpathentry kind="src" path="BMDB-Console/src"/>
+	<classpathentry kind="src" path="CH01_ex1_Invoice/src"/>
+	<classpathentry kind="src" path="CH01_ex1_TestScore/src"/>
+	<classpathentry kind="src" path="CH01_HelloJavaBootcamp/src"/>
+	<classpathentry kind="src" path="CH01_HelloWorldAgain/src"/>
+	<classpathentry kind="src" path="CH01_Test/src"/>
+	<classpathentry kind="src" path="CH02_CalculatorBasic/src"/>
+	<classpathentry kind="src" path="CH02_controlStatments/src"/>
+	<classpathentry kind="src" path="CH02_ex1_Invoice/src"/>
+	<classpathentry kind="src" path="CH02_ex2_TestScore/src"/>
+	<classpathentry kind="src" path="CH02_ex3_Invoice/src"/>
+	<classpathentry kind="src" path="CH02_FunWithStrings/src"/>
+	<classpathentry kind="src" path="CH02_Invoice/src"/>
+	<classpathentry kind="src" path="CH02_prj1_registration/src"/>
+	<classpathentry kind="src" path="CH02_PRJ2_GradeConverter/src"/>
+	<classpathentry kind="src" path="CH02_proj 2-1/src"/>
+	<classpathentry kind="src" path="CH03_ex1_MPG/src"/>
+	<classpathentry kind="src" path="CH03_Formatting/src"/>
+	<classpathentry kind="src" path="CH03_MathAndBigDecimal/src"/>
+	<classpathentry kind="src" path="CH03_Primitives_and_reference_types/src"/>
+	<classpathentry kind="src" path="CH03_proj_3-2/src"/>
+	<classpathentry kind="src" path="CH03_Unary_operators/src"/>
+	<classpathentry kind="src" path="CH04_ex2_Invoice/src"/>
+	<classpathentry kind="src" path="CH04_ex3_GuessNumber/src"/>
+	<classpathentry kind="src" path="CH04_ForLoops/src"/>
+	<classpathentry kind="src" path="CH04_proj_1/src"/>
+	<classpathentry kind="src" path="CH04_proj_4/src"/>
+	<classpathentry kind="src" path="CH04_proj_TipCalculator/src"/>
+	<classpathentry kind="src" path="CH04_ShortCircutOperators/src"/>
+	<classpathentry kind="src" path="CH04SwitchStatements/src"/>
+	<classpathentry kind="src" path="CH05_ex1_FutureValue_sol/src"/>
+	<classpathentry kind="src" path="CH05_ex2_GuessNumber_sol/src"/>
+	<classpathentry kind="src" path="CH05_Guessing-game/src"/>
+	<classpathentry kind="src" path="CH05_StaticMethods/src"/>
+	<classpathentry kind="src" path="CH07_prj4_Dice_Roller/src"/>
+	<classpathentry kind="src" path="CH07_Product_Manager/src"/>
+	<classpathentry kind="src" path="CH07_proj_1/src"/>
+	<classpathentry kind="src" path="CH08 _Abstract_Car/src"/>
+	<classpathentry kind="src" path="CH08_Advanded_Console_class/src"/>
+	<classpathentry kind="src" path="CH08_ex1_Product/src"/>
+	<classpathentry kind="src" path="CH08_ex3_EqualsTest/src"/>
+	<classpathentry kind="src" path="CH08_Inheritance_Demo/src"/>
+	<classpathentry kind="src" path="CH08_proj_2/src"/>
+	<classpathentry kind="src" path="CH09_ex1_DisplayableTest/src"/>
+	<classpathentry kind="src" path="CH09_prj2_AccountBalanceCalculator/src"/>
+	<classpathentry kind="src" path="CH09_Product_Interfaces_Demo/src"/>
+	<classpathentry kind="src" path="CH11_Fun_With_Arrays/src"/>
+	<classpathentry kind="src" path="CH11_prj1_Batting_Statistics_Calculator/src"/>
+	<classpathentry kind="src" path="CH12_Collection_Demo/src"/>
+	<classpathentry kind="src" path="CH12_ex1_CardDeck/src"/>
+	<classpathentry kind="src" path="CH12_prj2_The Wizzards_Bag/src"/>
+	<classpathentry kind="src" path="CH13_ex1_NameParser/src"/>
+	<classpathentry kind="src" path="CH13_Pig_Latin_Converter/src"/>
+	<classpathentry kind="src" path="CH14_DateTime/src"/>
+	<classpathentry kind="src" path="CH14_ex1_Invoice/src"/>
+	<classpathentry kind="src" path="CH14_ex2_AgeCalculator/src"/>
+	<classpathentry kind="src" path="CH15_ex1_CustomerManager/src"/>
+	<classpathentry kind="src" path="CH15_ex3_ProductManager/src"/>
+	<classpathentry kind="src" path="CH15_Files_Demo/src"/>
+	<classpathentry kind="src" path="CH15_prj1_Country_Manager/src"/>
+	<classpathentry kind="src" path="ch16_ex1_ExceptionTester/src"/>
+	<classpathentry kind="src" path="CH16_Exceptions_Demo/src"/>
+	<classpathentry kind="src" path="CH21_PRSConsole_DB/src"/>
+	<classpathentry kind="src" path="CH22_Contact_Manager (lambda demo)/src"/>
+	<classpathentry kind="src" path="CH22_ContactManager_Predicate_Consumer_Function/src"/>
+	<classpathentry kind="src" path="CH22_Contactmanager_Streams/src"/>
+	<classpathentry kind="src" path="ch22_ex1_BookCatalog/src"/>
+	<classpathentry kind="src" path="Pet_Store/src"/>
+	<classpathentry kind="src" path="Ternary_Operator/src"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
